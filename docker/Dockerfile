@@ -1,4 +1,4 @@
-FROM ros:humble-ros-base-jammy
+FROM osrf/ros:humble-desktop
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG UNITREE_SDK2_REF=main
