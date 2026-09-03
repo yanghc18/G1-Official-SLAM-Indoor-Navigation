@@ -26,3 +26,6 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Legacy project snapshot
+V0.1/
