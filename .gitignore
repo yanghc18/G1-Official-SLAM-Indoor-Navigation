@@ -1,0 +1,28 @@
+# ROS2 and build outputs
+build/
+install/
+log/
+
+# Runtime data and generated maps
+*.bag
+*.db3
+*.pcd
+*.pgm
+*.pbstream
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
