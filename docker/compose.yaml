@@ -1,0 +1,26 @@
+services:
+  g1-official-slam:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        UNITREE_SDK2_REF: ${UNITREE_SDK2_REF:-main}
+        UNITREE_SLAM_REF: ${UNITREE_SLAM_REF:-main}
+        http_proxy: ${http_proxy:-}
+        https_proxy: ${https_proxy:-}
+        no_proxy: ${no_proxy:-localhost,127.0.0.1}
+    image: g1-official-slam:humble
+    container_name: g1-official-slam
+    network_mode: host
+    environment:
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-0}
+      UNITREE_NETWORK_INTERFACE: ${UNITREE_NETWORK_INTERFACE:-eth0}
+      http_proxy: ${http_proxy:-}
+      https_proxy: ${https_proxy:-}
+      no_proxy: ${no_proxy:-localhost,127.0.0.1}
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../runtime:/runtime
+      - ../test-results:/test-results

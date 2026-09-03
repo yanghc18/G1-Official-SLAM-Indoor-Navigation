@@ -1,0 +1,13 @@
+.git
+.gitignore
+build/
+install/
+log/
+runtime/
+test-results/
+*.bag
+*.db3
+*.pcd
+*.pgm
+*.html
+V0.1/
